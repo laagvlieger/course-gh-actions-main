@@ -13,11 +13,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-var newSummaries = new[]
-{
-    "Brrrrr", "Yikes", "Frozen", "Hot", "Ouch", "StopIt"
-};
-
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -25,7 +20,14 @@ var summaries = new[]
 
 app.MapGet("/sensitive", (string? password) =>
 {
-    return "Access denied!";
+    if (password == "duckfoot335!")
+    {
+        return "You have access! Good job using the correct password: duckfoot335!";
+    }
+    else
+    {
+        return "Access denied!";
+    }
 });
 
 int foo;
