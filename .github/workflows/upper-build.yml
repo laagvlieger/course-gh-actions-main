@@ -10,9 +10,9 @@ jobs:
     #name: do the build
     runs-on: self-hosted
     steps:
-      - run: pwd && ls -la
+      - run: pwd; Get-ChildItem -Force #pwd && ls -la
       - uses: actions/checkout@v4
-      - run: pwd && ls -la
+      - run: pwd; Get-ChildItem -Force #pwd && ls -la
       #- run: go version
       - uses: actions/setup-go@v5
         with:
