@@ -7,9 +7,12 @@ on:
   workflow_dispatch: # manual
 jobs:
   build:    
-    name: setup-go
+    name: do the build
     runs-on: ubuntu-latest
     steps:
+      - run: pwd && ls -la
+      - uses: actions/checkout@v4
+      - run: pwd && ls -la
       - run: go version
       - uses: actions/setup-go@v5
         with:
