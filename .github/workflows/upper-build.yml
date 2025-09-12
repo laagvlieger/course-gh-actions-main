@@ -8,11 +8,11 @@ on:
 jobs:
   build:    
     #name: do the build
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
-      - run: pwd; Get-ChildItem -Force #pwd && ls -la
+      - run: pwd && ls -la
       - uses: actions/checkout@v4
-      - run: pwd; Get-ChildItem -Force #pwd && ls -la
+      - run: pwd && ls -la
       #- run: go version
       - uses: actions/setup-go@v5
         with:
