@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - ".github/workflows/gh.yml"
-      - "README.md"
   workflow_dispatch: # manual
-jobs:
+
+  jobs:
     cli:
         runs-on: ubuntu-latest
         steps:
