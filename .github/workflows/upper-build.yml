@@ -8,7 +8,7 @@ on:
 jobs:
   build:    
     #name: do the build
-    runs-on: macos-latest
+    runs-on: self-hosted
     steps:
       - run: pwd && ls -la
       - uses: actions/checkout@v4
