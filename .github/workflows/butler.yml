@@ -18,7 +18,5 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}            
           cmd:  chat
           comment_body: ${{ github.event.comment.body }}
-
-          
-# Warning: Unexpected input(s) 'cmd', 'comment_body', valid inputs are ['GITHUB_TOKEN', 'OPENAI_API_KEY']        
+                
                 
