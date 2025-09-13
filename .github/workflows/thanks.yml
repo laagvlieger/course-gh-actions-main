@@ -8,8 +8,10 @@ on:
 jobs:
     thanks:
         runs-on: ubuntu-latest
+        permissions:
+          issues: write
         steps:
-            - uses: actions/script@v7
+            - uses: actions/github-script@v7
               id: issue-script
               with:
                 github-token: ${{ secrets.GITHUB_TOKEN }}
