@@ -1,7 +1,7 @@
 name: butler
 
 permissions:
-    pull-requests: write
+  pull-requests: write
 
 on:
   issue_comment:
