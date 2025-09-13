@@ -12,7 +12,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+var newsummaries = new[]
+{
+    "Freezing",  "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+};
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
