@@ -37,7 +37,7 @@ jobs:
                     console.log(`comment: ${JSON.stringify(comment.data.id)}`);
                     console.log(comment.data);
 
-                    // auto label
+                    // auto label bla
                     github.rest.issues.addLabels({
                       owner,
                       repo,
