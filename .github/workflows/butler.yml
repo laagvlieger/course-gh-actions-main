@@ -12,10 +12,6 @@ jobs:
   chat:
     runs-on: ubuntu-latest
     steps:
-      - name: Show temp script
-        run: cat /home/runner/work/_temp/c02dee97-9984-4e6f-b903-7f712a2cb239.sh || echo "File not found"
-      - name: Dump GitHub context
-        run: echo "${{ toJSON(github) }}"
       - uses: ca-dp/code-butler@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
