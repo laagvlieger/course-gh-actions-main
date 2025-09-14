@@ -16,6 +16,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # Make sure this exists in your secrets!
-          cmd: chat
-          comment_body: ${{ github.event.comment.body }}
+          cmd: review
+#          comment_body: ${{ github.event.comment.body }}
           lang: en             
