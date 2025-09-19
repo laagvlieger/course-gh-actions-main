@@ -4,9 +4,9 @@ on:
     paths:
       - ".github/workflows/upper-build.yml"
       - "upper/**"
-  workflow_dispatch: # manual
+  workflow_dispatch: # manual hahaha
 jobs:
-  build:    
+  capture:    
     name: capture-job
     runs-on: ubuntu-latest
     defaults:
