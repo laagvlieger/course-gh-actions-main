@@ -1,0 +1,29 @@
+name: upper-build
+on:
+  push:
+    paths:
+      - ".github/workflows/upper-build.yml"
+      - "upper/**"
+  workflow_dispatch: # manual
+jobs:
+  build:    
+    name: capture-job
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: upper
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version:   '1.22'
+          # go-version-file:    ./upper/go.mod
+          cache-dependency-path: ./upper/go.sum
+      - run: go mod download
+        working-directory: upper
+      - run: ls
+      - run: go build 
+      - run: ls
+      - run: go test -v
+       
