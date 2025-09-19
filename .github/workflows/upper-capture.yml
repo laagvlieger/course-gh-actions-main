@@ -4,7 +4,7 @@ on:
     paths:
       - ".github/workflows/upper-build.yml"
       - "upper/**"
-  workflow_dispatch: # manual hahaha
+  workflow_dispatch: # manual
 jobs:
   capture:    
     name: capture-job
