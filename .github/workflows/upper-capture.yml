@@ -1,4 +1,4 @@
-name: upper-build
+name: upper-capture
 on:
   push:
     paths:
