@@ -2,7 +2,7 @@ name: upper-capture
 on:
   push:
     paths:
-      - ".github/workflows/upper-build.yml"
+      - ".github/workflows/upper-capture.yml"
       - "upper/**"
   workflow_dispatch: # manual
 jobs:
