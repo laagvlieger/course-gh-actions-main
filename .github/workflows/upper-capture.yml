@@ -26,12 +26,6 @@ jobs:
       - run: ls
       - run: go test -v
       - uses: actions/upload-artifact@v4
-        if: matrix.os == 'windows-latest'
         with:
-          path: ./upper/upper.exe
-          name: build-windows-latest
-      - uses: actions/upload-artifact@v4
-        if: matrix.os != 'windows-latest'
-        with:
-          path: ./upper/upper
+          path: ./upper/upper.*
           name: build-${{ matrix.os }}
