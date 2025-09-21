@@ -14,6 +14,8 @@ jobs:
         working-directory: upper
     steps:
       - uses: actions/checkout@v4
+      - name: Make script executable
+        run: chmod +x ./build.xplat.sh
       - uses: actions/setup-go@v5
         with:
           go-version: '1.22'
