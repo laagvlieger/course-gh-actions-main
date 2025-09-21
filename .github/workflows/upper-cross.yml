@@ -28,6 +28,6 @@ jobs:
           files: ./upper/bin/upper*
           body: |
             # upper cross-compiled binaries 
-            - Built and uploaded by GitHub Actions  
+            - Built and uploaded by GitHub Actions hahaha  
           tag_name: ${{github.ref_name}}
 
