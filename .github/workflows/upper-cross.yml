@@ -6,7 +6,9 @@ on:
       - "upper/**"
   workflow_dispatch: # manual
 jobs:
-  capture:
+  cross:
+    permissions:
+      contents: write
     name: capture-job-using-script
     runs-on: ubuntu-latest
     defaults:
