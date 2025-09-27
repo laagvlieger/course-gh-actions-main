@@ -27,5 +27,5 @@ jobs:
       - run: docker tag upper ghcr.io/${{ secrets.repository_owner }}/upper:latest
       - run: docker tag upper ghcr.io/${{ secrets.repository_owner }}/upper:${{ github.ref_name }}
       - run: docker push ghcr.io/${{ secrets.repository_owner }}/upper:latest
-      - run: docker push ghcr.io/${{ secrets.repository_owner }}/upper:${{ github_ref_name }}
+      - run: docker push ghcr.io/${{ secrets.repository_owner }}/upper:${{ github.ref_name }}
         
