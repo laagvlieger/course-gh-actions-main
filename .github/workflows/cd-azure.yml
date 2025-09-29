@@ -9,7 +9,7 @@ on:
 permissions:
   packages: write
   contents: read # not needed in public repos
-
+  id-token: write
 jobs:
     #build:
       # runs-on: ubuntu-latest
