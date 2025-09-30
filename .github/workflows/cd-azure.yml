@@ -40,5 +40,5 @@ jobs:
     - uses: azure/webapps-deploy@v3
       with:
         app-name: "course-gh-actions-api"
-        images: "laagvlieger/course-gh-actions-api:latest"
+        images: "dderijke/actions-web:latest"
         resource-group-name: "course-gh-actions-rg"
