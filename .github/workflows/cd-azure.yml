@@ -37,8 +37,15 @@ jobs:
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-    - uses: azure/webapps-deploy@v3
-      with:
-        app-name: "course-gh-actions-api"
-        images: "dderijke/actions-web:latest"
-        resource-group-name: "course-gh-actions-rg"
+    - name: Test Azure Web App Connection
+      run: |
+        az webapp show \
+        --name course-gh-actions-api \
+        --resource-group course-gh-actions-rg \
+        --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        
+#    - uses: azure/webapps-deploy@v3
+#      with:
+#        app-name: "course-gh-actions-api"
+#        images: "dderijke/actions-web:latest"
+#        resource-group-name: "course-gh-actions-rg"
