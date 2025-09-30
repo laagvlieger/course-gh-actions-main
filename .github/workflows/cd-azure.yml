@@ -37,3 +37,8 @@ jobs:
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    - uses: azure/webapps-deploy@v3
+      with:
+        app-name: "course-gh-actions-api"
+        images: "laagvlieger/course-gh-actions-api:latest"
+        resource-group-name: "course-gh-actions-rg"
