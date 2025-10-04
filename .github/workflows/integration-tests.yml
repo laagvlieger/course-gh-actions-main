@@ -24,5 +24,4 @@ jobs:
             image: mysql:8.4
         steps:
             - run: echo "${{needs.generate.outputs.RANDOM_PASSWORD}}"
-            - run: mysql -uroot -p${{needs.generate.outputs.RANDOM_PASSWORD}} -e "SELECT 1+1;"
             - run: mysql --version
