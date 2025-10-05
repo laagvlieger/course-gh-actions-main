@@ -20,14 +20,8 @@ var summaries = new[]
 
 app.MapGet("/sensitive", (string? password) =>
 {
-    if (password == "duckfoot335!")
-    {
-        return "You have access! Good job using the correct password: duckfoot335!";
-    }
-    else
-    {
         return "Access denied!";
-    }
+    // DDR: commented this out as it is a security risk to have a password in the URL
 });
 
 int foo;
