@@ -32,6 +32,7 @@ app.MapGet("/sensitive", (string? password) =>
 
 int foo;
 
+/* DDR: commented this out as it is not used anywhere
 var consistentForecasts = Enumerable.Range(1, 5).Select(index =>
     new WeatherForecast
     (
@@ -40,7 +41,7 @@ var consistentForecasts = Enumerable.Range(1, 5).Select(index =>
         summaries[Random.Shared.Next(summaries.Length)]
     ))
     .ToArray();
-
+*/
 app.MapGet("/weatherforecast", () =>
 {
     var forecast = Enumerable.Range(1, 5).Select(index =>
